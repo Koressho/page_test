@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoChoice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center; /* タイトルを中央寄せに */
+        }
+        h1 {
+            font-size: 80px; /* 大きなフォントサイズ */
+            margin-top: 130px; /* 上部のマージンを増やしてタイトルを下に移動 */
+            margin-bottom: 40px; /* 下部のマージンを追加 */
+            font-family: 'Caveat', cursive; /* タイトルのフォントを変更 */
+        }
+				#searchInput {
+            width: 580px; /* 検索ボックスの幅をさらに長く */
+            padding: 10px; /* パディングを追加して見栄えを良くする */
+            font-size: 16px; /* フォントサイズを調整 */
+            border: none; /* ボーダーを削除 */
+            border-radius: 20px; /* 角を丸める */
+            outline: none; /* フォーカス時の枠線を削除 */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); /* 影を追加 */
+            margin-bottom: 100px; /* 検索ボックスとタブの間のマージンを追加 */
+        }
+
+        .tabs {
+              display: grid;
+              grid-template-columns: repeat(3, auto); /* 3列に分割 */
+              gap: 10px; /* タブ間の間隔 */
+              justify-content: center; /* タブを中央に配置 */
+              margin-bottom: 20px;
+          }
+        .tab {
+              margin-bottom: 20px; /* タブの下側のマージンを追加 */
+              margin-left: 10px; /* 左側のマージンを追加 */
+              margin-right: 10px; /* 右側のマージンを追加 */
+              text-align: center; /* タブのテキストを中央寄せ */
+              padding: 20px; /* タブの内側の余白を追加 */
+              background-color: #f0f0f0; /* タブの背景色を追加 */
+              border-radius: 10px; /* タブの角を丸くする */
+              cursor: pointer; /* マウスを乗せた時にポインターを変更 */
+              transition: background-color 0.3s ease; /* マウスを乗せた時の背景色の変化をスムーズにする */
+              width: 130px; /* 各タブの幅を調整します */
+              margin: 0 10px; /* 左右のタブ間のマージンを調整 */
+              height: 60px; /* タブの高さを指定 */
+          }
+
+
+
+        .tab:nth-child(1) {
+              background-color: #F3FFD8; /* タブ1の背景色 */
+          }
+
+        .tab:nth-child(2) {
+              background-color: #D7EEFF; /* タブ2の背景色 */
+          }
+
+        .tab:nth-child(3) {
+              background-color: #D9E5FF; /* タブ3の背景色 */
+          }
+
+        .tab:nth-child(4) {
+              background-color: #EAD9FF; /* タブ4の背景色 */
+          }
+
+        .tab:nth-child(5) {
+              background-color: #FFD5EC; /* タブ5の背景色 */
+          }
+
+        .tab:nth-child(6) {
+              background-color: #FFDBC9; /* タブ6の背景色 */
+          }
+        .tab:nth-child(1):hover,
+        .tab:nth-child(1):focus {
+              background-color: #E9FFA5	; /* タブ1のホバー時の背景色 */
+          }
+
+        .tab:nth-child(2):hover,
+        .tab:nth-child(2):focus {
+            background-color: #A7F1FF; /* タブ2のホバー時の背景色 */
+        　}
+
+        .tab:nth-child(3):hover,
+        .tab:nth-child(3):focus {
+            background-color: #A4C6FF; /* タブ3のホバー時の背景色 */
+        　}
+
+        .tab:nth-child(4):hover,
+        .tab:nth-child(4):focus {
+            background-color: #D0B0FF; /* タブ4のホバー時の背景色 */
+        　}
+
+        .tab:nth-child(5):hover,
+        .tab:nth-child(5):focus {
+            background-color: #FFABCE; /* タブ5のホバー時の背景色 */
+        　}
+
+        .tab:nth-child(6):hover,
+        .tab:nth-child(6):focus {
+            background-color: #FFAD90; /* タブ6のホバー時の背景色 */
+        　}
+
+
+      </style>
+</head>
+<body>
+
+	<div class="container">
+	    <h1>No Choice</h1>
+	    <div class="search-container">
+	        <form id="searchForm" action="">
+	            <input type="text" id="searchInput" name="query" placeholder="キーワードを入力してください">
+	        </form>
+          <div class="tabs">
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabA" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category A</label>
+                      <select id="tabA" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabB" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category B</label>
+                      <select id="tabB" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabC" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category C</label>
+                      <select id="tabC" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabD" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category D</label>
+                      <select id="tabD" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabE" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category E</label>
+                      <select id="tabE" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+              <div class="tab" style="display: flex; justify-content: center; align-items: center;">
+                  <form action="">
+                      <label for="tabF" style="font-family: 'Permanent Marker', cursive;font-size: 20px;margin-top: -15px;">Category F</label>
+                      <select id="tabF" name="query" style="margin-top: 15px;">
+                          <option value="">--選択してください--</option>
+                          <option value="linkA.html">エアコン</option>
+                          <option value="linkB.html">ピアノ</option>
+                          <option value="linkC.html">ギター</option>
+                          <option value="linkD.html">机</option>
+                          <option value="linkE.html">パソコン</option>
+                      </select>
+                  </form>
+              </div>
+          </div>
+
+      </div>
+
+
+		<script>
+		    document.getElementById('searchForm').addEventListener('submit', function(event) {
+		        event.preventDefault();
+		        var searchInput = document.getElementById('searchInput').value;
+		        if (searchInput === "エアコン") {
+		            window.location.href = "linkA.html";
+		        } else {
+		            alert("検索キーワードに対応するリンクが見つかりませんでした。");
+		        }
+		    });
+
+        var tabs = document.querySelectorAll('.tab select');
+        tabs.forEach(function(tab) {
+            tab.addEventListener('change', function() {
+                var selectInput = this.value;
+                if (selectInput) {
+                    window.location.href = selectInput;
+                }
+            });
+        });
+
+    </script>
+
+		</body>
+		</html>
